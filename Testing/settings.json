@@ -1,0 +1,14 @@
+{
+    "urls_to_scrape": [
+      {
+        "url": "https://www.example.com",
+        "expected_title": "Example Domain"
+      },
+      {
+        "url": "https://www.cannabisbusinesstimes.com/news/5-tips-to-maintain-a-healthy-organic-living-soil-for-your-indoor-cannabis-facility",
+        "expected_title": "5 Tips To Maintain a Healthy, Organic Living Soil for Your Indoor Cannabis Facility - Cannabis Business Times"
+      }
+    ],
+    "output_folder": "scraped_data"
+  }
+  
