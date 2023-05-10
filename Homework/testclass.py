@@ -30,12 +30,7 @@ eg.play()
 print(eg.numStrings)
 
 eg.use_distortion()
-print(g.price)
-print(eg.price)
 Guitar.discount(77)
-print(g.price)
-print(eg.price)
-
 date_string = '5/10/2023'
 # assign each to diferent variables in a list as a ints, day month year
 string_list = ['1', '2', '3', '4', '5']
@@ -48,14 +43,11 @@ ints = [int(x) for x in string_list]
 
 
 # then lambada square them 
-print(list(map(lambda num: (int(num)**2), string_list)))
+# print(list(map(lambda num: (int(num)**2), string_list)))
 
-
-
-# print(make_tup(pairs))
 
 numbers = [1, 2, 3, 4, 5]
-print(list(filter(lambda x: x % 2 == 0, numbers)))
+# print(list(filter(lambda x: x % 2 == 0, numbers)))
 
 # smallest, largest, average = min_max_avg(numbers)
 def min_max(numbers):
@@ -69,15 +61,7 @@ Great answers! You've shown a solid understanding of the concepts.
 
 Here are ten programming problems that require you to apply the concepts you've learned:
 
-1. **Palindrome Check:** Write a function that checks if a string is a palindrome. A palindrome is a word that reads the same backward as forward.
 
-2. **Unique Elements:** Given a list, write a function that returns a new list with unique elements of the first list.
-
-3. **Multiples of Three and Five:** If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Write a function to find the sum of all the multiples of 3 or 5 below a given number.
-
-4. **String Compression:** Implement a method to perform basic string compression using the counts of repeated characters. For example, the string "aabcccccaaa" would become "a2b1c5a3". If the "compressed" string would not become smaller than the original string, your method should return the original string.
-
-5. **Prime Number:** Write a function that accepts a number and returns True if it's a prime number, False otherwise.
 
 6. **Fibonacci Sequence:** Write a function that generates the Fibonacci sequence up to a certain number. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.
 
@@ -108,10 +92,11 @@ def make_tup(lst):
 # 1. **Palindrome Check:** Write a function that checks if a string is a palindrome. A palindrome is a word that reads the same backward as forward.
 def check_palindrome(word):
     wordlist = list(str(word))
-    print(wordlist)
+    # print(wordlist)
     for char, i in enumerate(wordlist):
-        print(f'char is {char} and i is {i}')
-        print(wordlist[::-1] == wordlist)
+        # print(f'char is {char} and i is {i}')
+        # print(wordlist[::-1] == wordlist)
+        pass
 
 word = 'totally'
 
@@ -124,4 +109,49 @@ check_palindrome(word2)
 # 2. **Unique Elements:** Given a list, write a function that returns a new list with unique elements of the first list.
 my_list = [1, 2, 2, 2, 4, 5, 6, 5, 6, 8, 9, 7, 4, 5, 919, 4, 2, 2, 4, 3, 5, 6]
 unique_list = set(my_list)
-print(unique_list)
+# print(unique_list)
+
+# 3. **Multiples of Three and Five:** If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+#  The sum of these multiples is 23. Write a function to find the sum of all the multiples of 3 or 5 below a given number.
+
+def multiples(numbers):
+    print(f'Number: {numbers}')
+    multiple3 = [num for num in numbers if num % 3 == 0]
+    multiple5 = [num for num in numbers if num % 5 == 0]
+    return sum(set(multiple3+multiple5)) # or no set
+
+def multiples(number):
+    numbers = list(range(0, number))
+    m3 = [num for num in numbers if num % 3 == 0]
+    m5 = [num for num in numbers if num % 5 == 0]
+    print(m3, m5)
+    return sum(m3 + m5)
+
+print(multiples(5050))
+
+# 4. **String Compression:** Implement a method to perform basic string compression using the counts of repeated characters. For example, the string "aabcccccaaa" would become "a2b1c5a3". 
+# If the "compressed" string would not become smaller than the original string, your method should return the original string.
+
+# 4. **String Compression:** Implement a method to perform basic string compression using the counts of repeated characters. For example, the string "aabcccccaaa" would become "a2b1c5a3". 
+# This function should correctly compress the string, as requested. You can test it with the string "aabcccccaaa", and it should return "a2b1c5a3".
+# If the "compressed" string would not become smaller than the original string, your method should return the original string.
+
+# test_str = "aabcccccaaa"
+
+# def strcomp(strng):
+#     new_str = ''
+#     for index, char in enumerate(strng):
+#         print(f'char: {char} at index {index}')
+#         print(f'The character at index +1 is {strng[index+1]} at index {index+1}')
+#         if index < len(strng) - 1: # its the last
+#             print(f'char at index+1 is {strng[index+1]} at index {index+1}')
+
+# strcomp(test_str)
+
+# 5. **Prime Number:** Write a function that accepts a number and returns True if it's a prime number, False otherwise.
+
+
+def is_prime(num):
+    pass
+def prime_number(num):
+    return is_prime(num)
