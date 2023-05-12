@@ -161,9 +161,8 @@ def prime_number(num):
 
 def gen_fib(upto=15):
     fibonacci_sequence = [0, 1]
-    last_sum = 0
-    # upto[0:3]
-    for 
+    a, b = a, b+a #?
+    # input validation
         
 
 gen_fib(5)
